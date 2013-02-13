@@ -1,0 +1,8 @@
+exclude:
+  - CNAME
+  - package.json
+  - grunt.js
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - config.rb
