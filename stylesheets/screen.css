@@ -304,68 +304,63 @@ caption {
   }
 }
 
-/* line 22, ../sass/screen.sass */
-#the-text {
-  max-width: 500px;
-}
-
 @media (min-width: 540px) {
-  /* line 26, ../sass/screen.sass */
+  /* line 23, ../sass/screen.sass */
   #container {
     overflow: auto;
-    margin: 0 auto;
+    margin: 2em auto;
     width: 90%;
     max-width: 1024px;
   }
 
-  /* line 32, ../sass/screen.sass */
+  /* line 28, ../sass/screen.sass */
   #the-text {
     float: left;
   }
 
-  /* line 35, ../sass/screen.sass */
+  /* line 30, ../sass/screen.sass */
   #the-media {
     float: right;
   }
 }
 @media (min-width: 540px) and (max-width: 759px) {
-  /* line 39, ../sass/screen.sass */
-  #the-text {
+  /* line 34, ../sass/screen.sass */
+  #the-text, #page-header {
     width: 60%;
   }
 
-  /* line 42, ../sass/screen.sass */
+  /* line 36, ../sass/screen.sass */
   #the-media {
     width: 35%;
   }
-  /* line 44, ../sass/screen.sass */
+  /* line 38, ../sass/screen.sass */
   #the-media li {
-    width: 90%;
-    padding: 5%;
+    width: 80%;
+    padding: 10%;
   }
 }
 @media (min-width: 760px) {
-  /* line 49, ../sass/screen.sass */
-  #the-text {
+  /* line 43, ../sass/screen.sass */
+  #the-text, #page-header {
     width: 50%;
   }
 
-  /* line 51, ../sass/screen.sass */
+  /* line 45, ../sass/screen.sass */
   #the-media {
     width: 45%;
   }
-  /* line 53, ../sass/screen.sass */
+  /* line 47, ../sass/screen.sass */
   #the-media li {
-    width: 46%;
-    padding: 2%;
+    width: 44%;
+    padding: 3%;
   }
 }
-/* line 59, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 h1 {
   font-family: Oswald;
 }
 
-/* line 62, ../sass/screen.sass */
+/* line 56, ../sass/screen.sass */
 h2, h3, h4 {
   font-family: "PT Sans Narrow";
   font-weight: normal;
@@ -373,30 +368,41 @@ h2, h3, h4 {
   color: #9b4f55;
 }
 
-/* line 67, ../sass/screen.sass */
+/* line 61, ../sass/screen.sass */
+#page-header {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 65, ../sass/screen.sass */
+#page-header hgroup {
+  text-align: center;
+}
+
+/* line 68, ../sass/screen.sass */
 #the-text {
   text-align: justify;
 }
-/* line 69, ../sass/screen.sass */
+/* line 70, ../sass/screen.sass */
 #the-text section {
   border-bottom: 1px solid #cccccc;
 }
 
-/* line 73, ../sass/screen.sass */
+/* line 74, ../sass/screen.sass */
 #the-media ul {
   margin: 0;
   padding: 0;
 }
-/* line 76, ../sass/screen.sass */
+/* line 77, ../sass/screen.sass */
 #the-media ul li {
   display: block;
   float: left;
 }
-/* line 79, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 #the-media ul li a {
   display: block;
 }
-/* line 81, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 #the-media ul li a img {
   width: 100%;
   display: block;

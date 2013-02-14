@@ -19,40 +19,34 @@ html
     padding-bottom: 300px
     background: image-url("yaris.png") no-repeat bottom right
 
-#the-text
-  max-width: 500px
-
 +respond-to(tablet2laptop)
   #container
     overflow: auto
-    margin: 0 auto
+    margin: 2em auto
     width: 90%
     max-width: 1024px
-
   #the-text
     float: left
-
   #the-media
     float: right
 
 +respond-to(tablet)
-  #the-text
+  #the-text, #page-header
     width: 60%
-
   #the-media
     width: 35%
     li
-      width: 90%
-      padding: 5%
+      width: 80%
+      padding: 10%
 
 +respond-to(laptop)
-  #the-text
+  #the-text, #page-header
     width: 50%
   #the-media
     width: 45%
     li
-      width: 46%
-      padding: 2%
+      width: 44%
+      padding: 3%
 
 // styling
 
@@ -63,6 +57,13 @@ h2, h3, h4
   font-family: $heading-font-family
   +header-text
   +loud
+
+#page-header
+  padding-bottom: 1.5em
+  margin-bottom: 1.5em
+  border-bottom: 1px solid #ccc
+  hgroup
+    text-align: center
 
 #the-text
   text-align: justify
