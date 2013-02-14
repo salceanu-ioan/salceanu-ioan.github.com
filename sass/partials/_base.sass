@@ -1,0 +1,43 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns   : 24
+$blueprint-container-size : 950px
+$blueprint-grid-margin    : 10px
+$blueprint-font-family    : "PT Sans"
+$blueprint-font-size      : 16px
+$title-font-family        : Oswald
+$heading-font-family      : "PT Sans Narrow"
+
+$blueprint-background-color : #eeeeee
+$font-color                 : #333333
+$loud-color                 : #9B4F55
+$quiet-color                : #999999
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin
+
+$break-phone    : 540px
+$break-laptop   : 760px
+
+@mixin respond-to($media)
+  @if $media == phone
+    @media (max-width: $break-phone)
+      @content
+
+  @else if $media == tablet
+    @media (min-width: $break-phone) and (max-width: $break-laptop - 1)
+      @content
+
+  @else if $media == laptop
+    @media (min-width: $break-laptop)
+      @content
+
+  @else if $media == phone2tablet
+    @media (max-width: $break-laptop - 1)
+      @content
+
+  @else if $media == tablet2laptop
+    @media (min-width: $break-phone)
+      @content

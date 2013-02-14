@@ -3,9 +3,12 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print"/>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/screen.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -14,19 +17,25 @@
 
 <body>
 <div id="container">
-  <div class="inner">
 
-    <header>
-      <h1>Salceanu Ioan</h1>
+  <header id="page-header">
+    <h1>Salceanu Ioan</h1>
 
-      <h2>Instructor auto autorizat Iasi</h2>
-    </header>
+    <h2>Instructor auto autorizat Iasi</h2>
+  </header>
 
-    <hr>
-    <section id="main_content">
-      {{content}}
-    </section>
-  </div>
+  <section id="the-text">
+    {{content}}
+  </section>
+
+  <section id="the-media">
+    <ul>
+      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+    </ul>
+  </section>
 </div>
 </body>
 </html>

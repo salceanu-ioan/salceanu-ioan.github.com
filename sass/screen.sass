@@ -1,0 +1,104 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Oswald)
+
+@import blueprint/reset
+@import partials/base
+@import blueprint
+
+// @include blueprint
+
++blueprint-typography
+
+// layout
+
+html
+  +respond-to(phone)
+    padding: 5%
+    background: none
+
+  +respond-to(tablet2laptop)
+    padding-bottom: 300px
+    background: image-url("yaris.png") no-repeat bottom right
+
+#the-text
+  max-width: 500px
+
++respond-to(tablet2laptop)
+  #container
+    overflow: auto
+    margin: 0 auto
+    width: 90%
+    max-width: 1024px
+
+  #the-text
+    float: left
+
+  #the-media
+    float: right
+
++respond-to(tablet)
+  #the-text
+    width: 60%
+
+  #the-media
+    width: 35%
+    li
+      width: 90%
+      padding: 5%
+
++respond-to(laptop)
+  #the-text
+    width: 50%
+  #the-media
+    width: 45%
+    li
+      width: 46%
+      padding: 2%
+
+// styling
+
+h1
+  font-family: $title-font-family
+
+h2, h3, h4
+  font-family: $heading-font-family
+  +header-text
+  +loud
+
+#the-text
+  text-align: justify
+  section
+    border-bottom: 1px solid #ccc
+
+#the-media
+  ul
+    margin: 0
+    padding: 0
+    li
+      display: block
+      float: left
+      a
+        display: block
+        img
+          width: 100%
+          display: block
+
+//form
+//  +blueprint-form
+
+//body.two-col
+//  #container
+//    +container
+//  #header, #footer
+//    +column($blueprint-grid-columns)
+//  #sidebar
+//    // One third of the grid columns, rounding down. With 24 cols, this is 8.
+//    $sidebar-columns: floor($blueprint-grid-columns / 3)
+//    +column($sidebar-columns)
+//  #content
+//    // Two thirds of the grid columns, rounding up.
+//    // With 24 cols, this is 16.
+//    $content-columns: ceil(2 * $blueprint-grid-columns / 3)
+//    // true means it's the last column in the row
+//    +column($content-columns, true)
+//
+//

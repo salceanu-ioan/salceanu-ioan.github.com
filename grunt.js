@@ -69,13 +69,16 @@ module.exports = function( grunt ) {
 //      },
       compass: {
         files: [
-          'stylesheets/**/*.{scss,sass}'
+          'sass/**/*.{scss,sass}'
         ],
-        tasks: 'compass'
+        tasks: 'compass reload-all'
       },
       reload: {
         files: [
-          './**/*.{html,md,markdown}',
+          './*.{html,md,markdown}',
+          './_layouts/*.{html,md,markdown}',
+          './_includes/*.{html,md,markdown}',
+          './_posts/*.{html,md,markdown}',
           'stylesheets/**/*.css',
           'javascripts/**/*.js',
           'images/**/*'
@@ -138,6 +141,10 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-compass');
   grunt.loadNpmTasks('grunt-jekyll');
 
+  grunt.registerTask("jekyll-server", "Run jekyll with --server and --auto", function() {
+    require('child_process').exec('jekyll --auto --server 3500 --safe');
+  });
+
   grunt.registerTask('reload-all', 'jekyll:dev reload');
-  grunt.task.registerTask('default', 'reload-allserver watch');
+  grunt.task.registerTask('default', 'jekyll:dev server reload watch');
 };
