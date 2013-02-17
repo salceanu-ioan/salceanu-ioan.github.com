@@ -1,105 +1,151 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Oswald)
 
 @import blueprint/reset
-@import partials/base
 @import blueprint
+@import compass/css3
+@import partials/base
 
 // @include blueprint
 
 +blueprint-typography
 
 // layout
-
-html
-  +respond-to(phone)
-    padding: 5%
-    background: none
-
-  +respond-to(tablet2laptop)
-    padding-bottom: 300px
-    background: image-url("yaris.png") no-repeat bottom right
+body
+  background: $blueprint-background-color
 
 +respond-to(tablet2laptop)
-  #container
-    overflow: auto
+  #content
+    +container
     margin: 2em auto
-    width: 90%
-    max-width: 1024px
-  #the-text
+
+  #header
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    margin-bottom: 1.5em
+    .container
+      +container
+      position: relative
+      height: 100%
+    &.fixed
+      position: fixed
+
+  #nav
+    position: absolute
+    bottom: 0
+    left: 0
+    ul
+      +blueprint-reset-box-model
+      li
+        list-style: none
+        display: inline-block
+        a
+          +border-top-radius(3px)
+          display: block
+
+  #text
     float: left
-  #the-media
+  #media
     float: right
 
 +respond-to(tablet)
-  #the-text, #page-header
-    width: 60%
-  #the-media
-    width: 35%
-    li
-      width: 80%
-      padding: 10%
+  +text-and-media-layout(60%, 35%)
+  +media-layout(1)
+  +header-layout('tiny', 150px, 55px)
+  #nav ul li a
+    padding: .3em .5em 1em
+    font-size: 85%
+  #header hgroup
+    font-size: 90%
+    h2
+      margin-bottom: 0
 
 +respond-to(laptop)
-  #the-text, #page-header
-    width: 50%
-  #the-media
-    width: 45%
-    li
-      width: 44%
-      padding: 3%
+  +text-and-media-layout(55%, 40%)
+  +media-layout(2)
+  +header-layout('small', 250px, 75px)
+  #header hgroup
+    padding-top: 1em
+    font-size: 110%
+  #nav ul li a
+    padding: .3em .75em 1.25em
+
++respond-to(phone)
+  #content, #header .container
+    padding: 2.5% 5%
+  #header
+    margin-bottom: .5em
+    font-size: 80%
+    h2
+      margin-bottom: .5em
+    h1
+      margin-bottom: 1em
+    &.fixed
+      position: fixed
+      top: 0
+      width: 100%
+      hgroup
+        display: none
+
+  #nav
+    ul
+      +blueprint-reset-box-model
+      li
+        display: inline-block
+        list-style: none
+
+  +media-layout(2)
+
+
+
+
+#media ul
+  +blueprint-reset-box-model
+  li
+    display: block
+    float: left
+    a
+      display: block
+      img
+        width: 100%
+        display: block
 
 // styling
-
 h1
   font-family: $title-font-family
 
 h2, h3, h4
   font-family: $heading-font-family
+  text-shadow: 1px 1px 0 $font-color
   +header-text
   +loud
 
-#page-header
-  padding-bottom: 1.5em
-  margin-bottom: 1.5em
-  border-bottom: 1px solid #ccc
-  hgroup
-    text-align: center
+#header
+  border-top: 3px solid $loud-color
+  border-bottom: 1px solid darken($blueprint-background-color, 20%)
+  box-shadow: 0 0 10px rgba(#000, .25)
+  background-color: #fff
 
-#the-text
+#nav a
+  padding: .2em .75em
+  color: $header-color
+  text-decoration: none
+  font-family: Oswald
+  text-transform: uppercase
+
+  &:hover
+    text-shadow: 0 0 30px $loud-color
+
+  &.on
+    background: $loud-color
+    color: #fff
+    &:hover
+      text-shadow: 0 0 30px rgba(#fff, .5)
+
+#text
   text-align: justify
   section
     border-bottom: 1px solid #ccc
 
-#the-media
-  ul
-    margin: 0
-    padding: 0
-    li
-      display: block
-      float: left
-      a
-        display: block
-        img
-          width: 100%
-          display: block
 
-//form
-//  +blueprint-form
-
-//body.two-col
-//  #container
-//    +container
-//  #header, #footer
-//    +column($blueprint-grid-columns)
-//  #sidebar
-//    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-//    $sidebar-columns: floor($blueprint-grid-columns / 3)
-//    +column($sidebar-columns)
-//  #content
-//    // Two thirds of the grid columns, rounding up.
-//    // With 24 cols, this is 16.
-//    $content-columns: ceil(2 * $blueprint-grid-columns / 3)
-//    // true means it's the last column in the row
-//    +column($content-columns, true)
-//
-//

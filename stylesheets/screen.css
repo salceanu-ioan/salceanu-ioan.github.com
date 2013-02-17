@@ -62,7 +62,7 @@ a img {
 body {
   line-height: 1.5;
   font-family: "PT Sans";
-  color: #333333;
+  color: #444444;
   font-size: 100%;
 }
 
@@ -276,7 +276,7 @@ tfoot {
 
 /* line 87, ../../../.rvm/gems/ruby-1.9.3-p327@gh-pages/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 caption {
-  background: #eeeeee;
+  background: #eaeaea;
 }
 
 /* line 88, ../../../.rvm/gems/ruby-1.9.3-p327@gh-pages/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
@@ -286,124 +286,300 @@ caption {
 
 /* line 89, ../../../.rvm/gems/ruby-1.9.3-p327@gh-pages/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 .loud {
-  color: #9b4f55;
+  color: #aa2331;
 }
 
-@media (max-width: 540px) {
-  /* line 13, ../sass/screen.sass */
-  html {
-    padding: 5%;
-    background: none;
-  }
-}
-@media (min-width: 540px) {
-  /* line 13, ../sass/screen.sass */
-  html {
-    padding-bottom: 300px;
-    background: url('/images/yaris.png?1360786305') no-repeat bottom right;
-  }
+/* line 13, ../sass/screen.sass */
+body {
+  background: #eaeaea;
 }
 
 @media (min-width: 540px) {
-  /* line 23, ../sass/screen.sass */
-  #container {
-    overflow: auto;
-    margin: 2em auto;
+  /* line 17, ../sass/screen.sass */
+  #content {
     width: 90%;
+    margin: 0 auto;
     max-width: 1024px;
+    margin: 2em auto;
   }
 
-  /* line 28, ../sass/screen.sass */
-  #the-text {
+  /* line 21, ../sass/screen.sass */
+  #header {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+  /* line 27, ../sass/screen.sass */
+  #header .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1024px;
+    position: relative;
+    height: 100%;
+  }
+  /* line 31, ../sass/screen.sass */
+  #header.fixed {
+    position: fixed;
+  }
+
+  /* line 34, ../sass/screen.sass */
+  #nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  /* line 38, ../sass/screen.sass */
+  #nav ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  /* line 40, ../sass/screen.sass */
+  #nav ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  /* line 43, ../sass/screen.sass */
+  #nav ul li a {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    display: block;
+  }
+
+  /* line 47, ../sass/screen.sass */
+  #text {
     float: left;
   }
 
-  /* line 30, ../sass/screen.sass */
-  #the-media {
+  /* line 49, ../sass/screen.sass */
+  #media {
     float: right;
   }
 }
 @media (min-width: 540px) and (max-width: 759px) {
-  /* line 34, ../sass/screen.sass */
-  #the-text, #page-header {
+  /* line 48, ../sass/partials/_base.sass */
+  #text, #header hgroup, #header nav {
     width: 60%;
   }
 
-  /* line 36, ../sass/screen.sass */
-  #the-media {
+  /* line 50, ../sass/partials/_base.sass */
+  #media {
     width: 35%;
   }
-  /* line 38, ../sass/screen.sass */
-  #the-media li {
+
+  /* line 56, ../sass/partials/_base.sass */
+  #media li {
+    margin: 10%;
     width: 80%;
-    padding: 10%;
+  }
+
+  /* line 61, ../sass/partials/_base.sass */
+  body {
+    padding-top: 150px;
+  }
+
+  /* line 64, ../sass/partials/_base.sass */
+  #header {
+    background: white url('/images/toyota-yaris-tiny.png?1361037025') no-repeat bottom right;
+    height: 150px;
+  }
+  /* line 67, ../sass/partials/_base.sass */
+  #header.fixed {
+    height: 55px;
+    border: 0;
+  }
+  /* line 70, ../sass/partials/_base.sass */
+  #header.fixed hgroup {
+    display: none;
+  }
+
+  /* line 56, ../sass/screen.sass */
+  #nav ul li a {
+    padding: 0.3em 0.5em 1em;
+    font-size: 85%;
+  }
+
+  /* line 59, ../sass/screen.sass */
+  #header hgroup {
+    font-size: 90%;
+  }
+  /* line 61, ../sass/screen.sass */
+  #header hgroup h2 {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 760px) {
-  /* line 43, ../sass/screen.sass */
-  #the-text, #page-header {
-    width: 50%;
+  /* line 48, ../sass/partials/_base.sass */
+  #text, #header hgroup, #header nav {
+    width: 55%;
   }
 
-  /* line 45, ../sass/screen.sass */
-  #the-media {
-    width: 45%;
+  /* line 50, ../sass/partials/_base.sass */
+  #media {
+    width: 40%;
   }
-  /* line 47, ../sass/screen.sass */
-  #the-media li {
-    width: 44%;
-    padding: 3%;
+
+  /* line 56, ../sass/partials/_base.sass */
+  #media li {
+    margin: 5%;
+    width: 40%;
+  }
+
+  /* line 61, ../sass/partials/_base.sass */
+  body {
+    padding-top: 250px;
+  }
+
+  /* line 64, ../sass/partials/_base.sass */
+  #header {
+    background: white url('/images/toyota-yaris-small.png?1361036583') no-repeat bottom right;
+    height: 250px;
+  }
+  /* line 67, ../sass/partials/_base.sass */
+  #header.fixed {
+    height: 75px;
+    border: 0;
+  }
+  /* line 70, ../sass/partials/_base.sass */
+  #header.fixed hgroup {
+    display: none;
+  }
+
+  /* line 68, ../sass/screen.sass */
+  #header hgroup {
+    padding-top: 1em;
+    font-size: 110%;
+  }
+
+  /* line 71, ../sass/screen.sass */
+  #nav ul li a {
+    padding: 0.3em 0.75em 1.25em;
   }
 }
-/* line 53, ../sass/screen.sass */
+@media (max-width: 540px) {
+  /* line 75, ../sass/screen.sass */
+  #content, #header .container {
+    padding: 2.5% 5%;
+  }
+
+  /* line 77, ../sass/screen.sass */
+  #header {
+    margin-bottom: 0.5em;
+    font-size: 80%;
+  }
+  /* line 80, ../sass/screen.sass */
+  #header h2 {
+    margin-bottom: 0.5em;
+  }
+  /* line 82, ../sass/screen.sass */
+  #header h1 {
+    margin-bottom: 1em;
+  }
+  /* line 84, ../sass/screen.sass */
+  #header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  /* line 88, ../sass/screen.sass */
+  #header.fixed hgroup {
+    display: none;
+  }
+
+  /* line 92, ../sass/screen.sass */
+  #nav ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  /* line 94, ../sass/screen.sass */
+  #nav ul li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  /* line 56, ../sass/partials/_base.sass */
+  #media li {
+    margin: 5%;
+    width: 40%;
+  }
+}
+/* line 103, ../sass/screen.sass */
+#media ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* line 105, ../sass/screen.sass */
+#media ul li {
+  display: block;
+  float: left;
+}
+/* line 108, ../sass/screen.sass */
+#media ul li a {
+  display: block;
+}
+/* line 110, ../sass/screen.sass */
+#media ul li a img {
+  width: 100%;
+  display: block;
+}
+
+/* line 115, ../sass/screen.sass */
 h1 {
   font-family: Oswald;
 }
 
-/* line 56, ../sass/screen.sass */
+/* line 118, ../sass/screen.sass */
 h2, h3, h4 {
   font-family: "PT Sans Narrow";
+  text-shadow: 1px 1px 0 #444444;
   font-weight: normal;
   color: #222222;
-  color: #9b4f55;
+  color: #aa2331;
 }
 
-/* line 61, ../sass/screen.sass */
-#page-header {
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
-  border-bottom: 1px solid #cccccc;
-}
-/* line 65, ../sass/screen.sass */
-#page-header hgroup {
-  text-align: center;
+/* line 124, ../sass/screen.sass */
+#header {
+  border-top: 3px solid #aa2331;
+  border-bottom: 1px solid #b7b7b7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: white;
 }
 
-/* line 68, ../sass/screen.sass */
-#the-text {
+/* line 130, ../sass/screen.sass */
+#nav a {
+  padding: 0.2em 0.75em;
+  color: #222222;
+  text-decoration: none;
+  font-family: Oswald;
+  text-transform: uppercase;
+}
+/* line 137, ../sass/screen.sass */
+#nav a:hover {
+  text-shadow: 0 0 30px #aa2331;
+}
+/* line 140, ../sass/screen.sass */
+#nav a.on {
+  background: #aa2331;
+  color: white;
+}
+/* line 143, ../sass/screen.sass */
+#nav a.on:hover {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* line 146, ../sass/screen.sass */
+#text {
   text-align: justify;
 }
-/* line 70, ../sass/screen.sass */
-#the-text section {
+/* line 148, ../sass/screen.sass */
+#text section {
   border-bottom: 1px solid #cccccc;
-}
-
-/* line 74, ../sass/screen.sass */
-#the-media ul {
-  margin: 0;
-  padding: 0;
-}
-/* line 77, ../sass/screen.sass */
-#the-media ul li {
-  display: block;
-  float: left;
-}
-/* line 80, ../sass/screen.sass */
-#the-media ul li a {
-  display: block;
-}
-/* line 82, ../sass/screen.sass */
-#the-media ul li a img {
-  width: 100%;
-  display: block;
 }

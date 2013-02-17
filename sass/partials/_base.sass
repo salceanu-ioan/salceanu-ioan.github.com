@@ -9,10 +9,12 @@ $blueprint-font-size      : 16px
 $title-font-family        : Oswald
 $heading-font-family      : "PT Sans Narrow"
 
-$blueprint-background-color : #eeeeee
-$font-color                 : #333333
-$loud-color                 : #9B4F55
-$quiet-color                : #999999
+$blueprint-background-color : #eaeaea
+$font-color                 : #444
+$loud-color                 : #aa2331
+$quiet-color                : #999
+$strong-color               : $header-color
+
 
 // Use this to calculate the width based on the total width.
 // Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
@@ -21,7 +23,7 @@ $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $b
 $break-phone    : 540px
 $break-laptop   : 760px
 
-@mixin respond-to($media)
+=respond-to($media)
   @if $media == phone
     @media (max-width: $break-phone)
       @content
@@ -41,3 +43,34 @@ $break-laptop   : 760px
   @else if $media == tablet2laptop
     @media (min-width: $break-phone)
       @content
+
+=text-and-media-layout($text-width, $media-width)
+  #text, #header hgroup, #header nav
+    width: $text-width
+  #media
+    width: $media-width
+
+=media-layout($columns)
+  $margin: 10% / $columns
+  #media
+    li
+      margin: $margin
+      width: 100% / $columns - 2 * $margin
+
+=header-layout($size, $height, $fixed-height)
+  body
+    padding-top: $height
+
+  #header
+    background: #fff image-url("toyota-yaris-" + $size + ".png") no-repeat bottom right
+    height: $height
+    &.fixed
+      height: $fixed-height
+      border: 0
+      hgroup
+        display: none
+
+=container
+  width: 90%
+  margin: 0 auto
+  max-width: 1024px

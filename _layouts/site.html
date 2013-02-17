@@ -16,27 +16,41 @@
 </head>
 
 <body>
-<div id="container">
 
-  <header id="page-header">
-    <hgroup>
-      <h2>Instructor auto autorizat Iasi</h2>
-      <h1>Salceanu Ioan</h1>
-    </hgroup>
+  <header id="header">
+    <div class="container">
+      <hgroup>
+        <h2>Instructor auto autorizat Iasi</h2>
+        <h1>Salceanu Ioan</h1>
+      </hgroup>
+      <nav id="nav">
+        <ul>
+          <li><a href="#">Servicii</a></li>
+          <li><a href="#">Experienta</a></li>
+          <li><a href="#">Preturi</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div id="the-text">
-    {{content}}
+  <div id="content">
+    <div id="text">
+      {{content}}
+    </div>
+
+    <div id="media">
+      <ul>
+        <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+        <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+        <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+        <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
+      </ul>
+    </div>
   </div>
 
-  <div id="the-media">
-    <ul>
-      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
-      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
-      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
-      <li><a href="#"><img src="http://dummyimage.com/150x150/999999/333333.png" /></a></li>
-    </ul>
-  </div>
-</div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/jquery.scrollspy.js"></script>
+  <script src="/javascripts/main.js"></script>
 </body>
 </html>
