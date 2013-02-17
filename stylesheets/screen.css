@@ -566,12 +566,12 @@ h2, h3, h4 {
   text-shadow: 0 0 30px #aa2331;
 }
 /* line 140, ../sass/screen.sass */
-#nav a.on {
+#nav a.active {
   background: #aa2331;
   color: white;
 }
 /* line 143, ../sass/screen.sass */
-#nav a.on:hover {
+#nav a.active:hover {
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 

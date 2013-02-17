@@ -8,7 +8,7 @@
 ;(function ( $, window, document, undefined ) {
 
     $.fn.extend({
-      scrollspy: function ( options ) {
+      scrollspyx: function ( options ) {
 
           var defaults = {
             min: 0,
