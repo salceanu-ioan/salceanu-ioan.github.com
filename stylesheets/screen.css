@@ -583,3 +583,27 @@ h2, h3, h4 {
 #text section {
   border-bottom: 1px solid #cccccc;
 }
+/* line 153, ../sass/screen.sass */
+#text table tr td, #text table tr th {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 158, ../sass/screen.sass */
+#text table tr:last-child td, #text table tr:last-child th {
+  border: 0;
+}
+/* line 160, ../sass/screen.sass */
+#text table tr th {
+  text-align: left;
+  color: #aa2331;
+}
+/* line 163, ../sass/screen.sass */
+#text table tr th.price {
+  white-space: nowrap;
+}
+/* line 165, ../sass/screen.sass */
+#text table tr th.price small {
+  color: #999999;
+  font-weight: normal;
+  font-size: 75%;
+}

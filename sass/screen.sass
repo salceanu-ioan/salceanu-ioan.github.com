@@ -148,4 +148,21 @@ h2, h3, h4
   section
     border-bottom: 1px solid #ccc
 
+  table
+    tr
+      td, th
+        padding: .5em 1em
+        border-bottom: 1px solid #ccc
 
+      &:last-child
+        td, th
+          border: 0
+      th
+        text-align: left
+        +loud
+        &.price
+          white-space: nowrap
+          small
+            +quiet
+            font-weight: normal
+            font-size: 75%
